@@ -66,6 +66,9 @@
 
         $dataString.='&sign='.$sign;
         
+        // ios 使用 openshare  SDK 返回数据连接
+        //$iOSLink= "alipay://alipayclient/?".urlencode(json_encode(array('requestType' => 'SafePay', "fromAppUrlScheme" => /*iOS App的url schema，支付宝回调用*/"openshare","dataString"=>$dataString)));
+        //$return_data['ios+'] =$iOSLink;
         
         $return_data['ios'] = $dataString;
         $return_data['android'] =$dataString;
